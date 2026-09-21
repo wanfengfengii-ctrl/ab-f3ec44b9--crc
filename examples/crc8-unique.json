@@ -1,0 +1,49 @@
+{
+  "name": "CRC-8 唯一解与无解对照",
+  "samples": [
+    {
+      "payloadHex": "01 03 00 00 00 0A",
+      "observed": 12
+    },
+    {
+      "payloadHex": "01 04 02 FF FF",
+      "observed": 187
+    },
+    {
+      "payloadHex": "A5 5A DE AD BE EF",
+      "observed": 213
+    },
+    {
+      "payloadHex": "00",
+      "observed": 11
+    },
+    {
+      "payloadHex": "FF FF FF",
+      "observed": 112
+    },
+    {
+      "payloadHex": "12 34 56 78 9A",
+      "observed": 55
+    }
+  ],
+  "candidates": [
+    {
+      "id": "CRC8-1D-L",
+      "width": 8,
+      "direction": "left",
+      "poly": 29
+    },
+    {
+      "id": "CRC8-07-L",
+      "width": 8,
+      "direction": "left",
+      "poly": 7
+    },
+    {
+      "id": "CRC8-1D-R",
+      "width": 8,
+      "direction": "right",
+      "poly": 184
+    }
+  ]
+}

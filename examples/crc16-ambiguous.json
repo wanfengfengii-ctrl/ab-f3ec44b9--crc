@@ -1,0 +1,25 @@
+{
+  "name": "CRC-16 三短样本歧义",
+  "samples": [
+    {
+      "payloadHex": "01",
+      "observed": 32894
+    },
+    {
+      "payloadHex": "02",
+      "observed": 33086
+    },
+    {
+      "payloadHex": "03",
+      "observed": 16895
+    }
+  ],
+  "candidates": [
+    {
+      "id": "MODBUS-A001-R",
+      "width": 16,
+      "direction": "right",
+      "poly": 40961
+    }
+  ]
+}

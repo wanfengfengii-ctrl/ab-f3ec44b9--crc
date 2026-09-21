@@ -1,0 +1,85 @@
+{
+  "name": "CRC-16 多候选族",
+  "samples": [
+    {
+      "payloadHex": "00 01 02 00 80 00 AA 55",
+      "observed": 60749
+    },
+    {
+      "payloadHex": "01 01 02 07 80 0D AA 55",
+      "observed": 57603
+    },
+    {
+      "payloadHex": "02 01 02 0E 80 1A AA 55",
+      "observed": 62929
+    },
+    {
+      "payloadHex": "03 01 02 15 80 27 AA 55",
+      "observed": 48849
+    },
+    {
+      "payloadHex": "04 01 02 1C 80 34 AA 55",
+      "observed": 56437
+    },
+    {
+      "payloadHex": "05 01 02 23 80 41 AA 55",
+      "observed": 35289
+    },
+    {
+      "payloadHex": "06 01 02 2A 80 4E AA 55",
+      "observed": 19061
+    },
+    {
+      "payloadHex": "07 01 02 31 80 5B AA 55",
+      "observed": 45200
+    },
+    {
+      "payloadHex": "08 01 02 38 80 68 AA 55",
+      "observed": 36669
+    },
+    {
+      "payloadHex": "09 01 02 3F 80 75 AA 55",
+      "observed": 6439
+    },
+    {
+      "payloadHex": "0A 01 02 46 80 82 AA 55",
+      "observed": 9317
+    },
+    {
+      "payloadHex": "0B 01 02 4D 80 8F AA 55",
+      "observed": 32067
+    }
+  ],
+  "candidates": [
+    {
+      "id": "CRC16-C867-L",
+      "width": 16,
+      "direction": "left",
+      "poly": 51303
+    },
+    {
+      "id": "CRC16-1021-L",
+      "width": 16,
+      "direction": "left",
+      "poly": 4129
+    },
+    {
+      "id": "MODBUS-A001-R",
+      "width": 16,
+      "direction": "right",
+      "poly": 40961
+    },
+    {
+      "id": "CRC16-E613-R",
+      "width": 16,
+      "direction": "right",
+      "poly": 58899
+    },
+    {
+      "id": "CRC8-1D-L",
+      "width": 8,
+      "direction": "left",
+      "poly": 29
+    }
+  ]
+}

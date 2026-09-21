@@ -1,0 +1,29 @@
+{
+  "name": "crc-inversion-bench",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "纯前端 CRC 参数反演复核台：GF(2) 精确审计 init/xorOut 全部解",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit -p tsconfig.json && vite build",
+    "preview": "vite preview --host 0.0.0.0 --port 8080",
+    "test": "vitest run",
+    "verify": "node scripts/verify.mjs",
+    "gen:examples": "vite-node scripts/gen-examples.ts"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "happy-dom": "^15.11.7",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11",
+    "vite-node": "^2.1.8",
+    "vitest": "^2.1.8"
+  }
+}
