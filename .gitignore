@@ -11,3 +11,6 @@ __pycache__/
 .nox/
 .pnpm-store/
 *.py[cod]
+dist/
+.npm-cache/
+node_modules/.cache/

@@ -1,0 +1,16 @@
+{
+  "name": "示例采集批次",
+  "samples": [
+    { "id": "S1", "payload": "01 03 00 2A 00 02", "observed": "51" },
+    { "id": "S2", "payload": "DE AD BE EF", "observed": "DC" },
+    { "id": "S3", "payload": "48 65 6C 6C 6F", "observed": "76" },
+    { "id": "S4", "payload": "A5 5A 0D F0 17", "observed": "C0" }
+  ],
+  "candidates": [
+    { "id": "C8-1D", "width": 8, "direction": "msb-first", "poly": "1D" },
+    { "id": "C8-07", "width": 8, "direction": "msb-first", "poly": "07" },
+    { "id": "C8-31R", "width": 8, "direction": "lsb-first", "poly": "31" },
+    { "id": "C16-800D-R", "width": 16, "direction": "lsb-first", "poly": "800D" },
+    { "id": "C16-1021", "width": 16, "direction": "msb-first", "poly": "1021" }
+  ]
+}

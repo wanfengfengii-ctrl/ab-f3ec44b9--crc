@@ -1,0 +1,32 @@
+# 宿主机端口可配置：WEB_PORT=9090 docker compose up web
+services:
+  web:
+    build:
+      context: .
+      target: web
+    image: crc-bench-web:latest
+    ports:
+      # 宿主机 ${WEB_PORT} -> 容器 80；默认 8080
+      - "${WEB_PORT:-8080}:80"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://127.0.0.1/healthz"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+      start_period: 3s
+
+  # 一次性验收服务：等待 web 健康后运行，结束自行退出，以退出码报告结果。
+  # 用法：docker compose build && docker compose up --exit-code-from verify verify
+  verify:
+    build:
+      context: .
+      target: verify
+    image: crc-bench-verify:latest
+    depends_on:
+      web:
+        condition: service_healthy
+    environment:
+      BASE_URL: http://web
+    restart: "no"
+    command: ["node", "/tmp/acceptance.mjs"]
